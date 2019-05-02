@@ -3,21 +3,29 @@
 Project Solution Document
 
 1) Registering the user 
-   
-  User will be register with the following information 
+ 
+    User wil be asked to Signup or Login.
+    
+  User will be register with the following information:
 
    Name
    Mobile Number
    Email Address
-
+   
 Once user is registered , the date will be stored in a Jason file for further tracking.
 
-We display a message “Registered successfully”
+We display a message “Registered successfully.”
+ 
+If user tries to login before signup, then he will be asked to sign up first.
 
-User can login , if he is already registered. Once user logged in , 
+User can login , if he is already registered.
+
+If he fails to login, then he will be asked to check name, email and password and try again.
+
+If he fails to Login in three attempts, then he will not be given any other chance to login.
     
-Display a message “Logged in successfully”
-
+ If he logged in succesfully then display a message “Logged in successfully.”
+ 
 2) Garbage Collection:
 
   Once user logged in , ask user “Do you want to submit wastage”
@@ -40,7 +48,7 @@ What kind of Wastage do you want to submit:
 
   Display a message “Do you want to submit another wastage”
 
-  If user says  Yes  , repeat the above steps again, if user says “NO” 
+  If user says  Yes , repeat the above steps again, if user says “NO” 
 
     Display message “do you want to generate a report” 
  
