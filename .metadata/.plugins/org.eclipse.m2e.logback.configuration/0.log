@@ -1,5 +1,0 @@
-2019-05-03 00:09:59,849 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2019-05-03 00:23:04,584 [Worker-12: Launching New_configuration] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Rakesh Reddy\eclipse-workspace\swatchBharath
-2019-05-03 00:23:07,678 [Worker-12: Launching New_configuration] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B 
-2019-05-03 00:23:28,690 [Worker-3: Launching New_configuration] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Rakesh Reddy\eclipse-workspace\swatchBharath
-2019-05-03 00:23:28,691 [Worker-3: Launching New_configuration] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B 

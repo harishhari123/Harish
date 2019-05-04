@@ -1,1 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Rakesh Reddy\eclipse-workspace\swatchBharath\.metadata\.plugins\org.eclipse.jdt.core
