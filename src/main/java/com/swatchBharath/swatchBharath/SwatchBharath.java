@@ -25,6 +25,9 @@ import org.json.JSONObject;
 public class SwatchBharath {
 	static int failureCount=0;
 	static int successCount=0;
+	static int Weight=0;
+	static boolean submitagain=true;
+	
 	public static void main(String[] args) {
 		// Welcoming the user 
 		System.out.println("Welcome to the Swatch Bharth Application !!");
@@ -65,22 +68,82 @@ public class SwatchBharath {
 		    	 }
 		     }
 			}
-			if(failureCount>=3)System.out.println("please Try Again.You have reached maximum attempts!!");
+			if(failureCount>=3) {
+				System.out.println("please Try Again after some time.You have reached maximum attempts!!");
+				System.exit(0);
+				}
 			System.out.println("Do you want to submit wastage!!");
 			System.out.println("Please choose from  one of the below actions ");
 			System.out.println("1.yes");
 			System.out.println("2.no");
        String wasteCollectionDecision=bufferReader.readLine();
+       while(submitagain) {    
 if("yes".equalsIgnoreCase(wasteCollectionDecision) || "1".equalsIgnoreCase(wasteCollectionDecision)){
 	System.out.println("Please choose the type of waste ");
+	System.out.println("1.plastic");
+	System.out.println("2.metal");
+	System.out.println("3.glass");
+	String typeOfWastage=bufferReader.readLine();	
+	System.out.println("please select type of brand");
+	System.out.println("1.pepsi");
+	System.out.println("2.sprite");
+	System.out.println("3.coke");
+	System.out.println("4.others");
+	String typeOfBrand =bufferReader.readLine();
+	if("1".equalsIgnoreCase(typeOfWastage) || "plastic".equalsIgnoreCase(typeOfWastage))
+	{
+		if("1".equalsIgnoreCase(typeOfBrand) || "pepsi".equalsIgnoreCase(typeOfBrand))
+				Weight+=10;
+		if("2".equalsIgnoreCase(typeOfBrand) || "sprite".equalsIgnoreCase(typeOfBrand))
+				Weight+=15;
+		if("3".equalsIgnoreCase(typeOfBrand) || "coke".equalsIgnoreCase(typeOfBrand))
+				Weight+=20;
+		if("4".equalsIgnoreCase(typeOfBrand) || "others".equalsIgnoreCase(typeOfBrand))
+			Weight+=5;
+	}
+	
+	if("2".equalsIgnoreCase(typeOfWastage) || "metal".equalsIgnoreCase(typeOfWastage))
+	{
+		if("1".equalsIgnoreCase(typeOfBrand) || "pepsi".equalsIgnoreCase(typeOfBrand))
+				Weight+=15;
+		if("2".equalsIgnoreCase(typeOfBrand) || "sprite".equalsIgnoreCase(typeOfBrand))
+				Weight+=20;
+		if("3".equalsIgnoreCase(typeOfBrand) || "coke".equalsIgnoreCase(typeOfBrand))
+				Weight+=25;
+		if("4".equalsIgnoreCase(typeOfBrand) || "others".equalsIgnoreCase(typeOfBrand))
+			Weight+=10;
+	}
+	if("3".equalsIgnoreCase(typeOfWastage) || "glass".equalsIgnoreCase(typeOfWastage))
+	{
+		if("1".equalsIgnoreCase(typeOfBrand) || "pepsi".equalsIgnoreCase(typeOfBrand))
+				Weight+=20;
+		if("2".equalsIgnoreCase(typeOfBrand) || "sprite".equalsIgnoreCase(typeOfBrand))
+				Weight+=25;
+		if("3".equalsIgnoreCase(typeOfBrand) || "coke".equalsIgnoreCase(typeOfBrand))
+				Weight+=30;
+		if("4".equalsIgnoreCase(typeOfBrand) || "others".equalsIgnoreCase(typeOfBrand))
+			Weight+=15;
+	}
+	
+	System.out.println("do you want to submit again");
+	System.out.println("1.yes");
+	System.out.println("2.no");
+	 wasteCollectionDecision=bufferReader.readLine();
+	//if("2".equalsIgnoreCase(submitAgain) || "no".equalsIgnoreCase(submitAgain))
+		//submitagain=false;
+	
+}
+else
+	submitagain=false;
 
-} ;
+}
+	System.out.println("Congrats you have Earned "+Weight+ " Rewards points");
+
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
 	}
 	public boolean login(BufferedReader bufferReader) {
 		//welcome to login for swatchBharath
@@ -88,7 +151,6 @@ if("yes".equalsIgnoreCase(wasteCollectionDecision) || "1".equalsIgnoreCase(waste
 		String emailId="";
 		String mobileNumber="";
 		
-
 try {
 	System.out.println("Please Enter userName:");
 	username=bufferReader.readLine();
