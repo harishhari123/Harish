@@ -58,4 +58,6 @@ What kind of Wastage do you want to submit:
 we have to calculate the rewards points, based on the weight and generate the report with the following information.
 
            selected brand, wastage and reward points which user earned.
+           
+--Pull request created on develop branch to merge the changes into master branch
 
